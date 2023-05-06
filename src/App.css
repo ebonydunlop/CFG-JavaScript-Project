@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+#site-name {
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section-header {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navigation-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navigation-bar li {
+    padding: 0 1em;
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.card img {
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    filter: brightness(50%)
+}
+
+.card:hover .recipe-img-overlay {
+    transform: scale(1.1);
+}
+
+.recipe-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    opacity: 0.01;
+    transition: opacity 0.3s ease-out;
   }
+
+.card:hover .recipe-img-overlay {
+    opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#recipe-description {
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#recipe-rating {
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
 }
