@@ -6,6 +6,17 @@
     text-align: center;
 }
 
+#logo {
+    height: 100px;
+    margin-right: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navigation-bar {
     display: flex;
     justify-content: center;
