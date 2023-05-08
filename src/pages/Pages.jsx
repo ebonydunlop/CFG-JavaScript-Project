@@ -1,13 +1,20 @@
 import Home from "./Home";
-import NavBar from "../components/NavBar";
-import React from 'react'
+import AboutUs from "./AboutUs";
+import RecipeIndex from "./RecipeIndex";
+import Contact from "./Contact";
+import Error from "./Error";
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
 
 function Pages() {
   return (
-    <div>
-        <NavBar />
-        <Home />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<AboutUs />}/>
+        <Route path="/index" element={<RecipeIndex />}/>
+        <Route path="/contact" element={<Contact />}/>
+        <Route path="*" element={<Error />}/>
+      </Routes>
   )
 }
 
