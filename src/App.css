@@ -101,3 +101,13 @@
     font-size: 0.75em;
     text-align: center;
 }
+
+.filler-text {
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#search-bar {
+    justify-content: center;
+}
