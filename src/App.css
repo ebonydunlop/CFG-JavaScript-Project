@@ -108,6 +108,9 @@
     padding-right: 100px;
 }
 
-#search-bar {
+.search-bar-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }

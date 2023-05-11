@@ -1,28 +1,22 @@
-import React, { useState } from "react";
-import { popularRecipes, newRecipes } from "../Recipes";
-  
-const getFilteredItems = (query, items) => {
-    if (!query) {
-      return items;
-    }
-    return items.filter(recipe => recipe.name.toLowerCase().includes(query.toLowerCase()));
-  };
-  
+import React from 'react';
+import { POPULAR_RECIPES, NEW_RECIPES } from '../Recipes';
+import { useState } from 'react';  
 
 function SearchBar() {
+  const allRecipes = [...NEW_RECIPES, ...POPULAR_RECIPES];
   const [query, setQuery] = useState("");
-  const recipes = [...popularRecipes, ...newRecipes];
-  const filteredItems = getFilteredItems(query, recipes);
+  const filteredRecipes = allRecipes.filter((recipe) =>
+    recipe.name.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
-    <div>
-      <label>Search by Name </label>
-      <input type="text" onChange={e => setQuery(e.target.value)} />
-      <ul>
-        {filteredItems.map(value => (
-          <li key={value.id}>{value.name}</li>
-        ))}
-      </ul>
+    <div className="search-bar-container">
+      <input placeholder="Search recipes" onChange={(event) => setQuery(event.target.value)}/>
+      {filteredRecipes.map((recipe) => (
+        <div key={recipe.id}>
+          <p>{recipe.name}</p>
+        </div>
+      ))}
     </div>
   );
 }

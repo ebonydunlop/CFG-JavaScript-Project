@@ -40,28 +40,28 @@ const popularRecipes = [
   
 const newRecipes = [
     {
-      id: 1,
+      id: 5,
       name: "Teriyaki Pork Belly Ramen",
       image: PorkBellyRamen,
       description: "Melt-in-your-mouth pork belly meets savory teriyaki sauce in a steaming bowl of ramen.",
       rating: 4.0,
     },
     {
-      id: 2,
+      id: 6,
       name: "Asparagus and Brie Quiche",
       image: BrieAsparagusQuiche,
       description: "A perfect marriage of creamy and earthy flavors.",
       rating: 4.7,
     },
     {
-        id: 3,
+        id: 7,
         name: "Sea Bass with Salsa Verde",
         image: SalsaVerdeSeaBass,
         description: "Succulent sea bass paired with tangy, herbaceous salsa verde.",
         rating: 4.5,
       },
     {
-        id: 4,
+        id: 8,
         name: "Crispy Quinoa Burgers",
         image: QuinoaBurger,
         description: "A delicious and nutritious alternative to beef burgers.",
@@ -69,5 +69,6 @@ const newRecipes = [
     },
   ];
   
-export { popularRecipes, newRecipes };
+export const POPULAR_RECIPES = popularRecipes;
+export const NEW_RECIPES = newRecipes;
   

@@ -2,7 +2,7 @@ import Popular from "../components/Popular.jsx";
 import New from "../components/New.jsx";
 import React from 'react'
 import Logo from "../assets/images/Logo.png"
-import { newRecipes, popularRecipes } from "../Recipes.js";
+import { POPULAR_RECIPES, NEW_RECIPES } from '../Recipes.js';
 import NavBar from "../components/NavBar.jsx"
 
 function Home() {
@@ -15,8 +15,8 @@ function Home() {
       </div>
     <div>
         <NavBar />
-        <New recipes={newRecipes} />
-        <Popular recipes={popularRecipes} />
+        <New recipes={NEW_RECIPES} />
+        <Popular recipes={POPULAR_RECIPES} />
     </div>
     </div>
   )
