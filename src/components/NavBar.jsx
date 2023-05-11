@@ -22,7 +22,7 @@ function NavBar() {
             <Link to="/index">Recipe Index</Link>
           </li>
           <li onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-            <Link to="contact">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
       </nav>
